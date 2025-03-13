@@ -1,0 +1,50 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	background-color: #EDE8DC;
+}
+
+nav {
+    background-color: #C1CFA1;
+    text-align: center;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0%;
+    margin: 0;
+    display: inline-flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    background-color: #A5B68D;
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.submenu {
+    background-color: #C1CFA1;
+    position: absolute;
+    display: none;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+	display: block;
+}
+
+.menu li a:hover {
+    background-color: #B17F59;
+}
+
+.produtos li {
+	font-size: 20px;
+	padding: 5px 0px;
+}
