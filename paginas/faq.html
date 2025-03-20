@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site</title>
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="../menu.css">
 </head>
 <body>
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="index.html">Início</a></li>
+                <li><a href="../index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li>
 					<a href="#">Produtos</a>
@@ -26,7 +26,31 @@
 				<li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-		
+        <button class="acordeao">Como faço para adicionar um item no carrinho?</button>
+        <div class="painel">
+            <p>Está na página 200 do guia do site</p>
+        </div>
+
+        <script>
+            var acc = document.getElementsByClassName("acordeao");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var painel = this.nextElementSibling;
+                if (painel.style.display === "block") {
+                painel.style.display = "none";
+                } else {
+                painel.style.display = "block";
+                }
+            });
+            }
+        </script>
     </header>
 </body>
 </html>

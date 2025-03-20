@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site</title>
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="../menu.css">
 </head>
 <body>
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="index.html">Início</a></li>
+                <li><a href="../index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li>
 					<a href="#">Produtos</a>
@@ -26,7 +26,13 @@
 				<li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-		
+        <form action="#" method="post">
+            <label for="mensagem">Digite uma mensagem à equipe:</label>
+            <ul class="caixatexto"><textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea></ul>
+            <button type="submit">Enviar</button>
+        </form>
+        <br>
+        <h4>Caso não funcione, contate o email <a href="#">fulano@tmail.com</a></h4> 
     </header>
 </body>
 </html>
