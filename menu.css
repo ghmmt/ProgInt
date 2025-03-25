@@ -79,3 +79,11 @@ nav {
     display: none;
     overflow: hidden;
 } 
+
+.carrinho {
+    padding: 0px 0px;
+}
+
+.carrinho button {
+    padding: 0px -5px;
+}

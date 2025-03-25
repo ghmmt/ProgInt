@@ -13,20 +13,70 @@
                 <li><a href="../index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li>
-					<a href="#">Produtos</a>
+                    <a href="#">Produtos</a>
                     <ul class="submenu">
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
+                        <li><a href="produtos/scrobbles.html">Scrobbles</a></li>
+                        <li><a href="produtos/cimento.html">Saco de cimento 5kg</a></li>
+                        <li><a href="produtos/scrobbles.html">Betoneira de plástico</a></li>
                     </ul>
                 </li>
-				<li><a href="carrinho.html">Carrinho</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="parceiros.html">Parceiros</a></li>
-				<li><a href="contato.html">Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="parceiros.html">Parceiros</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
 		
+        <ul class="carrinho">
+            <h3>Scrobbles</h3>
+            <p id="contador1">0</p>
+            <button onclick="incrementar('contador1')">Incrementar</button>
+            <button onclick="decrementar('contador1')">Decrementar</button>
+        </ul>
+        
+        <ul class="carrinho">
+            <h3>Saco de cimento 5kgs</h3>
+            <p id="contador2">0</p>
+            <button onclick="incrementar('contador2')">Incrementar</button>
+            <button onclick="decrementar('contador2')">Decrementar</button>
+        </ul>
+        
+        <ul class="carrinho">
+            <h3>Betoneira de plástico</h3>
+            <p id="contador3">0</p>
+            <button onclick="incrementar('contador3')">Incrementar</button>
+            <button onclick="decrementar('contador3')">Decrementar</button>
+        </ul>
+        
+        <ul class="carrinho">
+            <button onclick="resetar()">Concluir compra</button>
+        </ul>
+        
+        <script>
+            function atualizarContador(contadorId) {
+                const contadorElement = document.getElementById(contadorId);
+                contadorElement.textContent = contadorElement.textContent;
+            }
+        
+            function incrementar(contadorId) {
+                let contadorElement = document.getElementById(contadorId);
+                let valorAtual = parseInt(contadorElement.textContent);
+                contadorElement.textContent = valorAtual + 1;
+            }
+        
+            function decrementar(contadorId) {
+                let contadorElement = document.getElementById(contadorId);
+                let valorAtual = parseInt(contadorElement.textContent);
+                contadorElement.textContent = valorAtual - 1;
+            }
+        
+            function resetar() {
+                let contadores = document.querySelectorAll('ul .carrinho p');
+                contadores.forEach(function(contadorElement) {
+                    contadorElement.textContent = "0";
+                });
+            }
+        </script>
     </header>
 </body>
 </html>
